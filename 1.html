@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=""width="device-width, initial-scale=1">
+    <title>Tamna</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <style>
+        .map {
+            grid-area: map;
+        }
+
+        .content {
+            grid-area: content;
+        }
+
+        .purpose {
+            grid-area: purpose;
+        }
+
+        .title {
+            grid-area: title;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                ' title title'
+                ' map purpose'
+                ' content content';
+            grid-gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+
+        .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class='title'>title</div>
+        <div class=map id="map" style="height:400px;"></div>
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=	a96e832bbf470eb627240fa9501077f4"></script>
+        <script>
+            var container = document.getElementById('map');
+            var options = {
+                center: new kakao.maps.LatLng(33.450701, 126.570667),
+                level: 3
+            };
+
+            var map = new kakao.maps.Map(container, options);
+        </script>
+        <div class="content">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>카테고리</th>
+                    <th>날짜</th>
+                </tr>
+                </thead>
+                <tbody>
+                <hr/>
+            
+                <tr>
+                    <td>1</td>
+                    <td><A href=http://www.jeju.go.kr/files/board/746cc1d2-010c-4917-bb85-982a77dff2ba.pdf >각시당본풀이</A></td>
+                    <td>신화</td>
+                    <td>2021.05.19</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><A href=http://www.jeju.go.kr/files/board/746cc1d2-010c-4917-bb85-982a77dff2ba.pdf >고내본향</A></td>
+                    <td>신화</td>
+                    <td>2021.05.19</td>
+                </tr>
+            
+                <tr>
+                    <td>3</td>
+                    <td><A href=http://www.jeju.go.kr/files/board/f585a475-92be-4f17-aa5a-3cefc0f6c77c.pdf >고대장본풀이</A></td>
+                    <td>신화</td>
+                    <td>2021.05.19</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><A href="http://www.jeju.go.kr/files/board/05272cf2-2f1a-4b8e-ae73-0333a89cc47e.pdf" >고도채비본</A></td>
+                    <td>신화</td>
+                    <td>2021.05.19</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="purpose"><a href="web/viewer.html?file=samplepdf.pdf"></a>
+            <br>
+            <iframe src="http://www.jeju.go.kr/files/board/05272cf2-2f1a-4b8e-ae73-0333a89cc47e.pdf" style="width:500px; height:300px; border:1px solid #00c;"></iframe></div>
+    </div>
+
+</body>
+
+</html>
