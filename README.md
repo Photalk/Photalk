@@ -254,4 +254,4 @@ PDF.js는 PDF 구문 분석 및 렌더링을위한 범용 웹 표준 기반 플�
       incurred by, or claims asserted against, such Contributor by reason
       of your accepting any such warranty or additional liability.
 
-Copyright calixteman under the [Apache License 2.0](http://www.apache.org/licenses/).
+Copyright [calixteman](https://github.com/calixteman) under the [Apache License 2.0](http://www.apache.org/licenses/).
