@@ -9,9 +9,9 @@
 
 
 
-1. [Apache](https://www.apachelounge.com/download/)를 다운로드 합니다. 
+1. Photalk 저장소에서 자신의 원격 저장소로 fork합니다.
 
-2. 압축을 푼 다음 Apache24 폴더를 C: 드라이브 경로로 옮깁니다. 
+2. git Bash를 실행 한 뒤 
 
 3.  Apache24/conf 경로에서 httpd.conf 파일을 편집합니다.(Define SRVROOT "C:\Apache24" 로 변경 )
 
