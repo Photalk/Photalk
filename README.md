@@ -11,7 +11,7 @@
 
 1. Photalk 저장소에서 자신의 원격 저장소로 fork합니다.
 
-2. git Bash를 실행 한 뒤 원격 저장소에서 로컬 저장소(Photalk 디렉토리)로 가져옵니다. <br> <br> (git clone https://github.com/깃헙사용자아이디/Photalk.git)
+2. git Bash를 실행 한 뒤 원격 저장소에서 로컬 저장소(Photalk 디렉토리)로 가져옵니다. <br> (git clone https://github.com/깃헙사용자아이디/Photalk.git)
 
 3. 지도 활성화를 위해 Kakao 개발자 사이트에서 앱을 생성한 뒤 JavaScript 키 발급을 받아 지도 API의 appkey로 사용합니다.
 
