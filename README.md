@@ -7,8 +7,6 @@
 ---
 ## 설치 및 사용방법
 
-### 파이선 개발툴이 있을 경우 
-
 1. Photalk 저장소에서 자신의 원격 저장소로 fork합니다.
 
 2. git Bash를 실행 한 뒤 원격 저장소에서 로컬 저장소(Photalk 디렉토리)로 가져옵니다.<br>(git clone https://github.com/깃헙사용자아이디/Photalk.git)
