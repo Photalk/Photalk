@@ -11,7 +11,7 @@
 
 1. Photalk 저장소에서 자신의 원격 저장소로 fork합니다.
 
-2. git Bash를 실행 한 뒤 
+2. git Bash를 실행 한 뒤 원격 저장소에서 로컬 저장소(Photalk 디렉토리)로 가져옵니다: git clone https://github.com/깃헙사용자아이디/opensource-class.git
 
 3.  Apache24/conf 경로에서 httpd.conf 파일을 편집합니다.(Define SRVROOT "C:\Apache24" 로 변경 )
 
