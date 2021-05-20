@@ -11,17 +11,18 @@
 
 1. Photalk 저장소에서 자신의 원격 저장소로 fork합니다.
 
-2. git Bash를 실행 한 뒤 원격 저장소에서 로컬 저장소(Photalk 디렉토리)로 가져옵니다: git clone https://github.com/깃헙사용자아이디/opensource-class.git
+2. git Bash를 실행 한 뒤 원격 저장소에서 로컬 저장소(Photalk 디렉토리)로 가져옵니다. (git clone https://github.com/깃헙사용자아이디/Photalk.git)
 
-3.  Apache24/conf 경로에서 httpd.conf 파일을 편집합니다.(Define SRVROOT "C:\Apache24" 로 변경 )
+3. 지도 활성화를 위해 Kakao 개발자 사이트에서 앱을 생성한 뒤 JavaScript 키 발급을 받아 지도 API의 appkey로 사용합니다.
 
-4. 관리자 권한이 있는 명령 프롬프트에서  Apache의 bin 경로로 이동합니다.(cd C:\Apache24\bin) 
+4. Photalk 디렉토리로 들어간 뒤 Shift + 마우스 오른쪽 클릭을 하여 PowerShell 창을 엽니다. 
 
-5. 명령 프롬프트에 설치 명령문을 입력합니다. (httpd.exe -k install)
+5.  PowerShell 창에 python -m http.server 8080를 입력합니다. 
 
-6. fork를 하거나 압축파일로 다운 받은 경우 Apache24/htdocs에 덮어씁니다. 
+6. <http://localhost:8080/1.html>에 접속합니다. 
+   
 
-7. ApacheMonitor.exe를 실행한 뒤 <http://localhost/> 또는 <http://localhost:80/>에 접속합니다.   
+   
 
 ---
 ## OPEN API
