@@ -1,89 +1,120 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html>
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content=""width="device-width, initial-scale=1">
+    <meta name="viewport" content="" width="device-width, initial-scale=1">
     <title>Tamna</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type='text/javascript' src='js/main.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        function open_in_frame(url) {
+            url = './web/viewer.html?file=/docs/' + url
+            $('#my_frame').attr('src', url);
+        }
+    </script>
+    <style>
+        .map {
+            grid-area: map;
+        }
+
+        .content {
+            grid-area: content;
+        }
+
+        .purpose {
+            grid-area: purpose;
+        }
+
+        .title {
+            grid-area: title;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                ' title title'
+                ' map purpose'
+                ' content content';
+            grid-gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+
+        .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            font-size: 30px;
+        }
+    </style>
 </head>
 
 <body>
-<div>
-    <img src="image/jeju.JPG" alt="">
-</div>
+    <div class="grid-container">
+        <div class='title'>title</div>
+        <div class=map id="map" style="height:400px;"></div>
+        <script type="text/javascript"
+            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=	a96e832bbf470eb627240fa9501077f4"></script>
+        <script>
+            var container = document.getElementById('map');
+            var options = {
+                center: new kakao.maps.LatLng(33.450701, 126.570667),
+                level: 3
+            };
 
-<div class = "map">
-<div id="map" style="width:750px;height:350px;"></div>
-<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=b9126069bd06173cf6190afbeff957c1"></script>
-<script>
-    var mapContainer = document.getElementById('map'), // 지도를 표시할 div
-        mapOption = {
-            center: new kakao.maps.LatLng(37.56649, 126.98131), // 지도의 중심좌표
-            level: 4, // 지도의 확대 레벨
-            mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
-        };
+            var map = new kakao.maps.Map(container, options);
+        </script>
+        <div class="content">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>제목</th>
+                        <th>카테고리</th>
+                        <th>날짜</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <hr />
 
-    // 지도를 생성한다
-    var map = new kakao.maps.Map(mapContainer, mapOption);
-</script>
-</div>
-<table class="table table-striped">
-    <thead>
-    <tr>
-        <th>번호</th>
-        <th>제목</th>
-        <th>작성자</th>
-        <th>날짜</th>
-    </tr>
-    </thead>
-    <tbody>
-    <hr/>
+                    <tr>
+                        <td>1</td>
+                        <td><A onclick='open_in_frame("각시당본풀이.pdf")'>각시당본풀이</A>
+                        </td>
+                        <td>신화</td>
+                        <td>2021.05.19</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><A onclick="open_in_frame('고내본향.pdf')">고내본향</A>
+                        </td>
+                        <td>신화</td>
+                        <td>2021.05.19</td>
+                    </tr>
 
-    <tr>
-        <td>1</td>
-        <td><A href=http://www.jeju.go.kr/files/board/746cc1d2-010c-4917-bb85-982a77dff2ba.pdf >각시당본풀이</A></td>
-        <td>정승원</td>
-        <td>2021.05.19</td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td><A href=http://www.jeju.go.kr/files/board/746cc1d2-010c-4917-bb85-982a77dff2ba.pdf >고내본향</A></td>
-        <td>정승원</td>
-        <td>2021.05.19</td>
-    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><A onclick="open_in_frame('고대장본풀이.pdf')">고대장본풀이</A>
+                        </td>
+                        <td>신화</td>
+                        <td>2021.05.19</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><A onclick="open_in_frame('고도채비본.pdf')">고도채비본</A>
+                        </td>
+                        <td>신화</td>
+                        <td>2021.05.19</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="purpose"><iframe id='my_frame' width="95%" height="390px"></iframe></div>
+    </div>
 
-    <tr>
-        <td>3</td>
-        <td><A href=http://www.jeju.go.kr/files/board/f585a475-92be-4f17-aa5a-3cefc0f6c77c.pdf >고대장본풀이</A></td>
-        <td>정승원</td>
-        <td>2021.05.19</td>
-    </tr>
-    <tr>
-        <td>4</td>
-        <td><A href="http://www.jeju.go.kr/files/board/05272cf2-2f1a-4b8e-ae73-0333a89cc47e.pdf" >고도채비본</A></td>
-        <td>정승원</td>
-        <td>2021.05.19</td>
-    </tr>
-    </tbody>
-</table>
-
-<a class="btn btn-default pull-right">글쓰기</a>
-
-<div class="text-center">
-    <ul class="pagination justify-content-center">
-        <li class="page=item"><a class="page-link" href="#">Previous</a></li>
-        <li class="page=item"><a class="page-link" href="#">1</a></li>
-        <li class="page=item"><a class="page-link" href="#">2</a></li>
-        <li class="page=item"><a class="page-link" href="#">3</a></li>
-        <li class="page=item"><a class="page-link" href="#">Next</a></li>
-    </ul>
-</div>
-<script src="js/jquery-3.1.1.js"></script>
-<script src="js/bootstrap.js"></script>
 </body>
+
 </html>
-
-
-
-
