@@ -20,7 +20,7 @@
 
 5. PowerShell 창에 python -m http.server 포트번호를 입력합니다. 
 
-6. <http://localhost:포트번호/1.html>에 접속합니다. 
+6. <http://localhost:포트번호>에 접속합니다. 
    
 
    
