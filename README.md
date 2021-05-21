@@ -18,9 +18,9 @@
 
 4. Photalk 디렉토리로 들어간 뒤 Shift + 마우스 오른쪽 클릭을 하여 PowerShell 창을 엽니다. 
 
-5. PowerShell 창에 python -m http.server 8080를 입력합니다. 
+5. PowerShell 창에 python -m http.server 포트번호를 입력합니다. 
 
-6. <http://localhost:8080/1.html>에 접속합니다. 
+6. <http://localhost:포트번호/1.html>에 접속합니다. 
    
 
    
