@@ -26,20 +26,22 @@
             grid-area: content;
         }
 
-        .purpose {
-            grid-area: purpose;
+        .PDF {
+            grid-area: PDF;
         }
 
         .title {
             grid-area: title;
         }
-
+        .image{
+            grid-area: image;
+        }
         .grid-container {
             display: grid;
             grid-template-areas:
-                ' title title'
-                ' map purpose'
-                ' content content';
+                ' title title title'
+                ' content map image'
+                ' content PDF PDF';
             grid-gap: 10px;
             background-color: #2196F3;
             padding: 10px;
@@ -56,9 +58,9 @@
 <body>
     <div class="grid-container">
         <div class='title'>title</div>
-        <div class=map id="map" style="height:400px;"></div>
+        <div class=map id="map" style="height:400px;">map</div>
         <script type="text/javascript"
-            src="//dapi.kakao.com/v2/maps/sdk.js?appkey= c1be6eda28d466510e7e79f35e31aa41"></script>
+            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a96e832bbf470eb627240fa9501077f4"></script>
         <script>
             var container = document.getElementById('map');
             var options = {
@@ -68,6 +70,7 @@
 
             var map = new kakao.maps.Map(container, options);
         </script>
+        <div class="image">image</div>
         <div class="content">
             <table class="table table-striped">
                 <thead>
@@ -113,7 +116,7 @@
                 </tbody>
             </table>
         </div>
-        <div class="purpose"><iframe id='my_frame' width="95%" height="390px"></iframe></div>
+        <div class="PDF"><iframe id='my_frame' width="95%" height="390px"></iframe></div>
     </div>
 
 </body>
