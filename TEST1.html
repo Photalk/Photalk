@@ -11,8 +11,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script>
-        function open_in_frame(url)
-        {
+        function open_in_frame(url) {
             url = './web/viewer.html?file=/docs/' + url
             $('#my_frame').attr('src', url);
         }
@@ -33,9 +32,11 @@
         .title {
             grid-area: title;
         }
-        .image{
+
+        .image {
             grid-area: image;
         }
+
         .grid-container {
             display: grid;
             grid-template-areas:
@@ -58,7 +59,7 @@
 <body>
     <div class="grid-container">
         <div class='title'>title</div>
-        <div class=map id="map" style="height:400px;">map</div>
+        <div class=map id="map" style="height:400px;"></div>
         <script type="text/javascript"
             src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a96e832bbf470eb627240fa9501077f4"></script>
         <script>
@@ -70,15 +71,18 @@
 
             var map = new kakao.maps.Map(container, options);
         </script>
-        <div class="image">image</div>
+
+
+
+
+
+        <div class="image"><image></div>
         <div class="content">
             <table class="table table-striped">
                 <thead>
                     <tr>
                         <th>번호</th>
                         <th>제목</th>
-                        <th>카테고리</th>
-                        <th>날짜</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -88,30 +92,22 @@
                         <td>1</td>
                         <td><A onclick='open_in_frame("각시당본풀이.pdf")'>각시당본풀이</A>
                         </td>
-                        <td>신화</td>
-                        <td>2021.05.19</td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td><A onclick="open_in_frame('고내본향.pdf')">고내본향</A>
                         </td>
-                        <td>신화</td>
-                        <td>2021.05.19</td>
                     </tr>
 
                     <tr>
                         <td>3</td>
                         <td><A onclick="open_in_frame('고대장본풀이.pdf')">고대장본풀이</A>
                         </td>
-                        <td>신화</td>
-                        <td>2021.05.19</td>
                     </tr>
                     <tr>
                         <td>4</td>
                         <td><A onclick="open_in_frame('고도채비본.pdf')">고도채비본</A>
                         </td>
-                        <td>신화</td>
-                        <td>2021.05.19</td>
                     </tr>
                 </tbody>
             </table>
