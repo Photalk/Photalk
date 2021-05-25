@@ -25,7 +25,7 @@
         ' content map image'
         ' content PDF PDF';
     grid-gap: 10px;
-    background-color: #2196F3;
+    background-color: hsla(207, 90%, 54%, 0.5);
     padding: 10px;
 }
 
