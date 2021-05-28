@@ -5,56 +5,113 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>전설</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-		<!-- Wrapper -->
-			<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<div class="inner">
+<head>
+	<title>전설</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="" width="device-width, initial-scale=1">
+	<title>Tamna</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<script type='text/javascript' src='js/main.js'></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.js"
+			integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+	<style>
+		body {
+			background-image: url("images/gf.png");
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+		}
+	</style>
+</head>
 
-							<!-- Logo -->
-								<a href="index.html" class="logo">
-									<span class="title">탐라저장소</span>
-								</a>
+<body class="is-preload">
+<!-- Wrapper -->
+<div id="wrapper">
 
-							<!-- Nav -->
-								<nav>
-									<ul>
-										<li><a href="#menu">Menu</a></li>
-									</ul>
-								</nav>
+	<!-- Header -->
+	<header id="header">
+		<div class="inner">
 
-						</div>
-					</header>
+			<!-- Logo -->
+			<a href="index.html" class="logo">
+				<h1><b><span class="title">탐라저장소</span></h1></b>
+			</a>
 
-				<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="신화.html">신화</a></li>
-							<li><a href="전설.html">전설</a></li>
-							<li><a href="민담.html">민담</a></li>
-						</ul>
-					</nav>
+			<!-- Nav -->
+			<nav>
+				<ul>
+					<li><a href="#menu">Menu</a></li>
+				</ul>
+			</nav>
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-							<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel venenatis mauris vehicula hendrerit.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
-						</div>
-					</div>
+		</div>
+	</header>
+
+	<!-- Menu -->
+	<nav id="menu">
+		<h2>Menu</h2>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="신화.html">신화</a></li>
+			<li><a href="전설.html">전설</a></li>
+			<li><a href="민담.html">민담</a></li>
+		</ul>
+	</nav>
+
+	<!-- Main -->
+	<div id="main">
+		<div class="inner">
+			<div class="grid-container">
+				<div class='title'>전설</div>
+				<div class=map id="map" style="height: 400px;"></div>
+				<div class="image"><img src="images/house.jpg"></div>
+				<div class="content">
+					<table class="table table-striped">
+						<thead>
+						<tr>
+							<th>번호</th>
+							<th>제목</th>
+						</tr>
+						</thead>
+						<tbody>
+						<hr />
+
+						<tr>
+							<td>1</td>
+							<td><A onclick='open_in_frame("각시당본풀이.pdf")'>각시당본풀이</A>
+							</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td><A onclick="open_in_frame('고내본향.pdf')">고내본향</A>
+							</td>
+						</tr>
+
+						<tr>
+							<td>3</td>
+							<td><A onclick="open_in_frame('고대장본풀이.pdf')">고대장본풀이</A>
+							</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td><A onclick="open_in_frame('고도채비본.pdf')">고도채비본</A>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="PDF"><iframe id='my_frame' width="95%" height="390px"></iframe></div>
+			</div>
+		</div>
+	</div>
 
 
 
@@ -62,12 +119,13 @@
 
 
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
 
-	</body>
+</body>
+
 </html>
