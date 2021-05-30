@@ -41,9 +41,9 @@
     .grid-container {
         grid-template-areas:/*<- 그리드 아이템 배열 순서 */
             ' title title title'
-            ' content map image'
-            ' content PDF PDF';
-         grid-template-columns: 2fr 1fr 1fr; /*<- 그리드 비율 2:1:1 */
+            ' map PDF image'
+            ' content content content';
+         grid-template-columns: 1fr 1fr 1fr; /*<- 그리드 비율 2:1:1 */
 
         grid-gap: 10px;
         background-color: hsla(207, 90%, 54%, 0.5);
