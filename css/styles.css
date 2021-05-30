@@ -26,7 +26,7 @@
         'map'
         'image'
         'PDF';
-
+    grid-template-rows: auto auto auto 1fr 1fr;
     grid-gap: 10px;
     background-color: hsla(207, 90%, 54%, 0.5);
     padding: 10px;
