@@ -31,7 +31,7 @@ const getContent = (data) => {
     for (let i = 0; i < content.length; i++) {
 
         var tableRow = {
-            no         : content[i].no,
+            no         : i+1,
             title        : content[i].title,
             lat   : content[i].lat,
             long       : content[i].long
