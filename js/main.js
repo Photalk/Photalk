@@ -1,23 +1,13 @@
-function open_in_frame(url) {
-    var p=document.getElementById('image');
-    p.innerHTML="<img src='images/신화/"+url+".jpg 'width='100%'>";
-    url = './web/viewer.html?file=/docs/신화/' + url+'.pdf';
+function open_pdf(type,url){
+    url = './web/viewer.html?file=/docs/'+type+'/' + url+'.pdf';
     $('#my_frame').attr('src', url);
-    
+}
+function open_image(type,url){
+    var p=document.getElementById('image');
+    p.innerHTML="<img src='images/"+type+"/"+url+".jpg 'width='100%'>";
 }
 
-function open_in_frame2(url) {
-    var p=document.getElementById('image');
-    p.innerHTML="<img src='images/전설/"+url+".jpg 'width='100%'>";
-    url = './web/viewer.html?file=/docs/전설/' + url+'.pdf';
-    $('#my_frame').attr('src', url);
-    
-}
-
-function open_in_frame3(url) {
-    var p=document.getElementById('image');
-    p.innerHTML="<img src='images/민담/"+url+".jpg 'width='100%'>";
-    url = './web/viewer.html?file=/docs/민담/' + url+'.pdf';
-    $('#my_frame').attr('src', url);
-    
+function click_event(type,url) {
+    open_image(type,url);
+    open_pdf(type,url)
 }
