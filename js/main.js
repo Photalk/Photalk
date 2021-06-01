@@ -24,38 +24,6 @@ function click_event(type,url,lat,long) {
     open_pdf(type,url)
 }
 
-
-window.addEventListener('DOMContentLoaded', (e) => {
-    const requestURL = "data/data.json";
-    const xhr = new XMLHttpRequest();
-    e.stopImmediatePropagation();
-
-    xhr.open('GET', requestURL, 'true');
-    xhr.responseType = 'json';
-    xhr.send();
-
-    xhr.onload = (e) => {
-        e.stopPropagation();
-        const jsonObj = xhr.response;
-        const outputContentEle = document.getElementById('outputContent');
-        outputContentEle.innerHTML = getContent(jsonObj);
-    }
-});
-
-
-const setRow = (obj) => {
-    // 객체 구조분해 할당
-    const {
-        no,
-        category,
-        title,
-        lat,
-        long
-    } = obj;
-    const rowtext = `<tr><td>${no}</td><td><A onclick='click_event("${category}","${title}","${lat}","${long}")'>${title}</A></td>`;
-    return rowtext;
-};
-
 const getContent = (data) => {
     const content = data.contents;
     const theadStr = "<thead><th>번호</th><th>제목</th></thead>";
@@ -64,7 +32,6 @@ const getContent = (data) => {
 
         var tableRow = {
             no         : content[i].no,
-            category      : content[i].category,
             title        : content[i].title,
             lat   : content[i].lat,
             long       : content[i].long

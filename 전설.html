@@ -19,10 +19,12 @@
 	<title>Tamna</title>
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/styles.css">
+	<script type="text/javascript" src="js/전설.js"></script>
 	<script type='text/javascript' src='js/main.js'></script>
 	<script type="text/javascript" src="js/bootstrap.js"></script>
 	<script src="https://code.jquery.com/jquery-3.6.0.js"
 			integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+			<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=a96e832bbf470eb627240fa9501077f4"></script>
 	<style>
 		body {
 			background-image: url("images/gf.png");
@@ -74,48 +76,9 @@
 				<div class="image" id="image"></div>
 
 				<div class="content">
-					<table class="table table-striped">
-						<thead>
-						<tr>
-						</tr>
-						</thead>
-						<tbody>
-						<hr/>
-						<tr>
-							<td><b>번호</b></td>
-							<td><b>제목</b></td>
-						</tr>
-
-						<tr>
-							<td>1</td>
-							<td><A onclick='click_event("전설","가릿뱅디")'>가릿뱅디</A>
-							</td>
-						</tr>
-						<tr>
-							<td>2</td>
-							<td><A onclick="click_event('전설','가파도 아기업개 바위')">가파도 아기업개 바위</A>
-							</td>
-						</tr>
-
-						<tr>
-							<td>3</td>
-							<td><A onclick="click_event('전설','가파도와 꿜파트')">가파도와 꿜파트</A>
-							</td>
-						</tr>
-						<tr>
-							<td>4</td>
-							<td><A onclick="click_event('전설','갈구미')">갈구미</A>
-							</td>
-						</tr>
-						<tr>
-							<td>5</td>
-							<td><A onclick="click_event('전설','강초간물')">강초간물</A>
-							</td>
-						</tr>
-						</tbody>
-					</table>
+					<table cellpadding='5' cellspacing='0' border='1' id="outputContent"></table>
 				</div>
-				<div class="PDF"><iframe id='my_frame' width="95%" height="390px"></iframe></div>
+				<div class="PDF"><iframe id='my_frame' width="100%" height="100%"></iframe></div>
 			</div>
 		</div>
 	</div>
