@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
         e.stopPropagation();
         const jsonObj = xhr.response;
         const outputContentEle = document.getElementById('outputContent');
-        outputContentEle.innerHTML = getContent(jsonObj);
+        outputContentEle.innerHTML = getContent2(jsonObj);
     }
 });
 
@@ -19,10 +19,28 @@ const setRow = (obj) => {
     // 객체 구조분해 할당
     const {
         no,
-        title,
-        lat,
-        long
+        title
     } = obj;
-    const rowtext = `<tr><td>${no}</td><td><a onclick='click_event("민담","${title}","${lat}","${long}")'>${title}</a></td>`;
+    const rowtext = `<tr><td>${no}</td><td><a onclick='click_event2("민담","${title}")'>${title}</a></td>`;
     return rowtext;
 };
+function click_event2(type, url) {
+    open_pdf(type, url);
+    open_image(type, url);
+}
+
+const getContent2 = (data) => {
+    const content = data.contents;
+    let tbodyStr = "<td><b>번호</b></td>" + "<td><b>제목</b></td>" + "<tbody>";
+    for (let i = 0; i < content.length; i++) {
+
+        var tableRow = {
+            no: i + 1,
+            title: content[i].title,
+        };
+
+        tbodyStr += setRow(tableRow);
+    }
+    tbodyStr += "</tbody>";
+    return (tbodyStr);
+}
