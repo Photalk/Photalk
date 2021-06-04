@@ -26,7 +26,7 @@ function click_event(type, url, lat, long) {
 
 const getContent = (data) => {
     const content = data.contents;
-    let tbodyStr = "\"<td><b>번호</b></td>\"+\"<td><b>제목</b></td>\"+\"<tbody>\"<tbody>";
+    let tbodyStr = "<td><b>번호</b></td>"+"<td><b>제목</b></td>"+"<tbody>";
     for (let i = 0; i < content.length; i++) {
 
         var tableRow = {
