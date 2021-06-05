@@ -22,7 +22,7 @@ function open_map(place, lat, long) {
     });
     // 마커 위에 표시할 인포윈도우를 생성한다
     var infowindow = new kakao.maps.InfoWindow({
-        content: '<div style="padding:5px;">' + place + '</div>' // 인포윈도우에 표시할 내용
+        content: '<div style="padding:5px; width:'+place.length*32+'px;">' + place + '</div>' // 인포윈도우에 표시할 내용
     });
     // 인포윈도우를 지도에 표시한다
     infowindow.open(map, marker);
