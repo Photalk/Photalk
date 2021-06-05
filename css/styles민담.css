@@ -10,10 +10,6 @@
     grid-area: PDF;
 }
 
-.title {
-    grid-area: title;
-}
-
 .image {
     grid-area: image;
 }
@@ -21,7 +17,6 @@
 .grid-container {
     display: grid;
     grid-template-areas:
-        'title'
         'content'
         'map'
         'image'
@@ -40,15 +35,18 @@
 @media screen and (min-width: 769px) {
     .grid-container {
         grid-template-areas:/*<- 그리드 아이템 배열 순서 */
-            ' title title title'
-            ' content image image'
-            ' PDF PDF PDF';
-         grid-template-columns: 1fr 1fr 1fr; /*<- 그리드 비율 2:1:1 */
-         grid-template-rows: auto 1fr 2fr;
+        'content content'
+            ' image image'
+            '  PDF PDF';
+         grid-template-columns: 1fr 1fr ; /*<- 그리드 비율 2:1:1 */
+         grid-template-rows: 1fr 1fr 2fr;
 
         grid-gap: 10px;
         background-color: hsla(255, 100%, 100%, 0);
         padding: 10px;
     }
     
+}
+a{
+    text-decoration-line: none;
 }
