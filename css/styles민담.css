@@ -35,8 +35,7 @@
 @media screen and (min-width: 769px) {
     .grid-container {
         grid-template-areas:/*<- 그리드 아이템 배열 순서 */
-        'content content'
-            ' image image'
+            ' content image'
             '  PDF PDF';
          grid-template-columns: 1fr 1fr ; /*<- 그리드 비율 2:1:1 */
          grid-template-rows: 1fr 1fr 2fr;
