@@ -38,7 +38,7 @@
             ' content image'
             '  PDF PDF';
          grid-template-columns: 1fr 1fr ; /*<- 그리드 비율 2:1:1 */
-         grid-template-rows: 1fr 1fr 2fr;
+         grid-template-rows: 1fr 1fr;
 
         grid-gap: 10px;
         background-color: hsla(255, 100%, 100%, 0);
