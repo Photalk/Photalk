@@ -29,10 +29,10 @@ function open_map(place, lat, long) {
 
 }
 
-function click_event(type, url, lat, long) {
+function click_event(type, url, place, lat, long) {
     open_pdf(type, url);
     open_image(type, url);
-    open_map(url, lat, long);
+    open_map(place, lat, long);
 }
 
 const getContent = (data) => {
@@ -43,6 +43,7 @@ const getContent = (data) => {
         var tableRow = {
             no: i + 1,
             title: content[i].title,
+            place: content[i].place,
             lat: content[i].lat,
             long: content[i].long
         };

@@ -19,9 +19,10 @@ const setRow = (obj) => {
     const {
         no,
         title,
+        place,
         lat,
         long
     } = obj;
-    const rowtext = `<tr><td>${no}</td><td><a onclick='click_event("전설","${title}","${lat}","${long}")'>${title}</a></td>`;
+    const rowtext = `<tr><td>${no}</td><td><a onclick='click_event("전설","${title}","${place}","${lat}","${long}")'>${title}</a></td>`;
     return rowtext;
 };
