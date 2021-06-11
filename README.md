@@ -278,4 +278,4 @@ PDF.js는 PDF 구문 분석 및 렌더링을위한 범용 웹 표준 기반 플�
    See the License for the specific language governing permissions and
    limitations under the License.
 
-Copyright [calixteman](https://github.com/calixteman/pdf.js) under the [Apache License 2.0](http://www.apache.org/licenses/).
+Copyright [Mozilla Foundation](https://github.com/mozilla/pdf.js) under the [Apache License 2.0](http://www.apache.org/licenses/).
